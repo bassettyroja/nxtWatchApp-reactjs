@@ -51,6 +51,7 @@ class App extends Component {
 
   render() {
     const {savedVideos, isDarkTheme, activeTab} = this.state
+
     return (
       <ThemeAndVideoContext.Provider
         value={{
@@ -73,7 +74,7 @@ class App extends Component {
           <ProtectedRoute exact path="/trending" component={TrendingVideos} />
           <ProtectedRoute exact path="/gaming" component={GamingVideos} />
           <ProtectedRoute exact path="/saved-videos" component={SavedVideos} />
-          <Route path="not-found" component={NotFound} />
+          <Route path="/not-found" component={NotFound} />
           <Redirect to="/not-found" />
         </Switch>
       </ThemeAndVideoContext.Provider>
